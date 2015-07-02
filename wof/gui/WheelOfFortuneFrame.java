@@ -1,8 +1,3 @@
-/**
- * @author Nikita Kouevda, Jenny Shen
- * @date 2013/10/05
- */
-
 package wof.gui;
 
 import java.awt.FlowLayout;

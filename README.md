@@ -1,6 +1,3 @@
-<!-- Nikita Kouevda, Jenny Shen -->
-<!-- 2013/10/05 -->
-
 # Wheel of Fortune
 
 Wheel of Fortune implemented in Java.
