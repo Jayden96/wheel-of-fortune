@@ -338,7 +338,7 @@ public class WheelOfFortuneWheelPanel extends JPanel {
 
     private void showAbout() {
         JOptionPane.showMessageDialog(null,
-            "Created by Nikita Kouevda and Jenny Shen\nOctober 5, 2013",
+            "Created by Nikita Kouevda and Jenny Shen\nJuly 12, 2015",
             "About", JOptionPane.INFORMATION_MESSAGE);
     }
 
