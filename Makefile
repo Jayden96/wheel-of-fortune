@@ -1,33 +1,25 @@
-# Compiler, archive tool, and options
+# Compiler and archive tool
 JAVAC := javac
-JAR := jar
-JAROPTS := cfm
+JAR := jar cvfm
 
 # Sources and targets
-SOURCES := $(wildcard wof/*/*.java)
-TARGETS := $(SOURCES:.java=.class)
-JAREXTRAS := $(wildcard wof/images/*.png) wof/phrases/phrases.txt \
-             $(wildcard wof/sounds/*.wav)
+SRC := src
+BIN := bin
+SOURCEPATH := $(SRC)/main/java
+MAIN := $(SOURCEPATH)/wof/gui/WheelOfFortuneFrame.java
 MANIFEST := MANIFEST.MF
 JARTARGET := wof.jar
 
-# All class files and their escaped versions, for commands
-CLASSES := $(wildcard wof/*/*.class)
-ESCCLASSES := $(subst $$,\$$,$(CLASSES))
-
 # Phony targets
-.PHONY: all jar cleanclass clean
+.PHONY: all cleanbin clean
 
-all: $(TARGETS)
+all:
+	mkdir -p $(BIN)
+	$(JAVAC) -d $(BIN) -sourcepath $(SOURCEPATH) $(MAIN)
+	$(JAR) $(JARTARGET) $(MANIFEST) -C $(BIN) . -C $(SRC)/main resources
 
-%.class: %.java
-	$(JAVAC) $+
-
-jar: all
-	$(JAR) $(JAROPTS) $(JARTARGET) $(MANIFEST) $(ESCCLASSES) $(JAREXTRAS)
-
-cleanclass:
-	rm -f $(ESCCLASSES)
+cleanbin:
+	rm -rf $(BIN)
 
 clean:
-	rm -f $(ESCCLASSES) $(JARTARGET)
+	rm -rf $(BIN) $(JARTARGET)

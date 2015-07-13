@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 import wof.game.WheelOfFortuneGame;
 
 public class WheelOfFortunePuzzlePanel extends JPanel {
-    private static final String SOUNDS_DIR = "/wof/sounds/";
+    private static final String SOUNDS_DIR = "/resources/sounds/";
 
     private static final int SQUARE_WIDTH = 35, SQUARE_HEIGHT = 45,
             SPACE_WIDTH = 2, PUZZLE_WIDTH = 12 * SQUARE_WIDTH,

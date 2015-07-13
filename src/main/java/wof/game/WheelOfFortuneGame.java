@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Set;
 
 public class WheelOfFortuneGame {
-    private static final String PHRASES_DIR = "/wof/phrases/";
+    private static final String PHRASES_DIR = "/resources/phrases/";
 
     private static final int INITIAL_TURNS = 7;
 

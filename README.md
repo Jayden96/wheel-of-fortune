@@ -2,23 +2,13 @@
 
 Wheel of Fortune implemented in Java.
 
-## Usage
-
-To compile:
+## Compilation
 
     make
 
-or (JAR):
+## Usage
 
-    make && make jar
-
-To run:
-
-    java wof.gui.WheelOfFortuneFrame
-
-or (JAR):
-
-    java -jar WheelOfFortune.jar
+    java -jar wof.jar
 
 ## License
 
