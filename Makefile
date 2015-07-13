@@ -1,6 +1,6 @@
 # Compiler and archive tool
 JAVAC := javac
-JAR := jar cvfm
+JAR := jar cfm
 
 # Sources and targets
 SRC := src
