@@ -1,25 +1,22 @@
-# Compiler and archive tool
 JAVAC := javac
 JAR := jar cfm
 
-# Sources and targets
-SRC := src
-BIN := bin
-SOURCEPATH := $(SRC)/main/java
-MAIN := $(SOURCEPATH)/wof/gui/WheelOfFortuneFrame.java
-MANIFEST := MANIFEST.MF
-JARTARGET := wof.jar
+srcdir := src
+sourcepath := $(srcdir)/main/java
+main := $(sourcepath)/wof/gui/WheelOfFortuneFrame.java
+manifest := MANIFEST.MF
+bindir := bin
+wof := wof.jar
 
-# Phony targets
 .PHONY: all cleanbin clean
 
 all:
-	mkdir -p $(BIN)
-	$(JAVAC) -d $(BIN) -sourcepath $(SOURCEPATH) $(MAIN)
-	$(JAR) $(JARTARGET) $(MANIFEST) -C $(BIN) . -C $(SRC)/main resources
+	mkdir -p $(bindir)
+	$(JAVAC) -d $(bindir) -sourcepath $(sourcepath) $(main)
+	$(JAR) $(wof) $(manifest) -C $(bindir) . -C $(srcdir)/main resources
 
 cleanbin:
-	rm -rf $(BIN)
+	rm -rf $(bindir)
 
 clean:
-	rm -rf $(BIN) $(JARTARGET)
+	rm -rf $(bindir) $(wof)
