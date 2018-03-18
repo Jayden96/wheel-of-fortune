@@ -12,4 +12,4 @@ Wheel of Fortune implemented in Java.
 
 ## License
 
-Licensed under the [MIT License](http://www.opensource.org/licenses/MIT).
+[MIT License](LICENSE.txt)
