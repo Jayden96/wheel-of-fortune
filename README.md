@@ -4,7 +4,13 @@ Wheel of Fortune implemented in Java.
 
 ## Compilation
 
+Compile:
+
     make
+
+Clean up:
+
+    make clean
 
 ## Usage
 
